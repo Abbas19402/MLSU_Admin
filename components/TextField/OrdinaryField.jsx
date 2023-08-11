@@ -8,7 +8,8 @@ const OrdinaryField = ({
     labelPosition, 
     fieldLength, 
     type,
-    w
+    w,
+    required=true
   }) => {
   return (
     <div className={`w-${w} h-fit flex flex-${labelPosition == 'right' || labelPosition == 'left' ? 'row items-center' : 'col items-start'} justify-start ${(labelPosition == 'right' || labelPosition == 'left')?  'gap-x-3' : 'gap-1'} p-2`}>

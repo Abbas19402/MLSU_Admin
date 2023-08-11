@@ -9,8 +9,10 @@ const Sidebar = ({ sidebarStatus, setSidebarStatus, setActiveSection }) => {
   useEffect(()=> {
     if(pathname == '/') {
       setActive('students')
+      setActiveSection('Students')
     } else {
       setActive(pathname.split('/')[1])
+      setActiveSection(pathname.split('/')[1])
     }
   },[])
   return (

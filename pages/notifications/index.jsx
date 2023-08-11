@@ -1,8 +1,9 @@
+import NotificationPage from '@/pageComponents/Notifications/NotificationPage'
 import React from 'react'
 
 const Notifications = () => {
   return (
-    <div className='text-black'>Notifications</div>
+    <NotificationPage />
   )
 }
 

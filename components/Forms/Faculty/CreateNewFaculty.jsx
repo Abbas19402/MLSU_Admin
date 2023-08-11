@@ -1,6 +1,5 @@
 import React from 'react'
 import Forms from '..'
-import Table from '@/components/Table'
 
 const CreateNewFaculty = () => {
   const personalDetails = {}

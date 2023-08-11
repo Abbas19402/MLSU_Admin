@@ -91,6 +91,7 @@ const FacultyContactForm = ({ contactDetails }) => {
           label={'Phone 2'}
           placeholder={'Enter secondary phone (optional)'}
           value={contactDetails}
+          required={false}
           labelPosition={'right'}
           fieldLength={'long'}
           type={'tel'}

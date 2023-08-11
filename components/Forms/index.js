@@ -3,6 +3,7 @@ import CreateNewFaculty from "./Faculty/CreateNewFaculty"
 import FacultyContactForm from "./Faculty/FacultyContactForm"
 import PersonalFacultyDetailsSection from "./Faculty/PersonalDetails"
 import QualificationFacultyMain from "./Faculty/Qualification Section/Main"
+import NotificationManagementForm from "./Notification/NotificationManagementForm"
 
 const Forms = {
     Faculty: {
@@ -11,7 +12,8 @@ const Forms = {
         qualification: QualificationFacultyMain,
         contact: FacultyContactForm
     },
-    Event: EventManagementForm
+    Event: EventManagementForm,
+    Notification: NotificationManagementForm
 }
 
 export default Forms
