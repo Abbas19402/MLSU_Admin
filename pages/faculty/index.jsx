@@ -1,8 +1,9 @@
+import FacultyPage from '@/pageComponents/Faculty/FacultyPage'
 import React from 'react'
 
 const Faculty = () => {
   return (
-    <div className='text-black'>Faculty</div>
+    <FacultyPage />
   )
 }
 

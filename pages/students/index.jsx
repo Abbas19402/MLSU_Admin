@@ -1,8 +1,9 @@
+import StudentPage from '@/pageComponents/Students/StudentPage'
 import React from 'react'
 
 const Students = () => {
   return (
-    <div className='border-2 h-screen'>Students</div>
+    <StudentPage />
   )
 }
 

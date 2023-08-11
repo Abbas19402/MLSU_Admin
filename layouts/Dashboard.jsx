@@ -2,7 +2,6 @@ import React , { useState } from 'react'
 import Header from '@/components/Header'
 import Sidebar from '@/components/Sidebar'
 import { ToastContainer } from 'react-toastify'
-import Head from 'next/head'
 
 const DashboardLayout = ({ children }) => {
   const [ sidebarStatus, setSidebarStatus ] = useState(false)
