@@ -41,7 +41,7 @@ const PersonalFacultyDetailsSection = ({ personalDetails }) => {
 
         </div>
         <div className="flex justify-start items-center gap-x-3 p-2 w-full">
-          <label className='text-sm font-medium tracking-wide w-20'>Date: </label>
+          <label className='text-sm font-medium tracking-wide w-20'>Date Of Birth: </label>
           <input type="date" name="dob" id="dob" className='border-[2px] px-2 py-1 rounded-md w-80 ' onChange={(e)=> personalDetails['dob']=e.target.value} />
         </div>
       </div>

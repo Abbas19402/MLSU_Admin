@@ -1,3 +1,4 @@
+import EventManagementForm from "./Events/EventManagementForm"
 import CreateNewFaculty from "./Faculty/CreateNewFaculty"
 import FacultyContactForm from "./Faculty/FacultyContactForm"
 import PersonalFacultyDetailsSection from "./Faculty/PersonalDetails"
@@ -9,7 +10,8 @@ const Forms = {
         personal: PersonalFacultyDetailsSection,
         qualification: QualificationFacultyMain,
         contact: FacultyContactForm
-    }
+    },
+    Event: EventManagementForm
 }
 
 export default Forms

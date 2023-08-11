@@ -59,19 +59,19 @@ const FacultyContactForm = ({ contactDetails }) => {
           value={contactDetails}
           labelPosition={'right'}
           fieldLength={'long'}
-          type={'text'}
+          type={'email'}
           w={'full'}
         />
-        <div className={`w-full h-fit flex flex-row items-center justify-startgap-x-3 p-2`}>
+        <div className={`w-full h-fit flex flex-col lg:flex-row items-start lg:items-center justify-start gap-x-3 gap-y-2 p-2`}>
             <div className="text-black w-32">
                 <label htmlFor="" className='text-sm font-medium tracking-wide whitespace-nowrap'>Secondary Email: </label>
             </div>
             <input 
-                className={`border-[2px] rounded-md focus:outline-[2px] outline-black flex justify-start items-center p-1.5 text-sm font-medium tracking-wide capitalize w-80`}
+                className={`border-[2px] rounded-md focus:outline-[2px] outline-black flex justify-start items-center p-1.5 text-sm font-medium tracking-wide w-full lg:w-80`}
                 name={'secondaryEmail'}
                 placeholder={'Secondary email (optional)'}
                 onChange={(e)=> contactDetails[`secondaryEmail`] = e.target.value}
-                type={'text'}
+                type={'email'}
             />
         </div>
       </div>
@@ -83,7 +83,7 @@ const FacultyContactForm = ({ contactDetails }) => {
           value={contactDetails}
           labelPosition={'right'}
           fieldLength={'long'}
-          type={'text'}
+          type={'tel'}
           w={'full'}
         />
         <TextField.Ordinary 
@@ -93,7 +93,7 @@ const FacultyContactForm = ({ contactDetails }) => {
           value={contactDetails}
           labelPosition={'right'}
           fieldLength={'long'}
-          type={'text'}
+          type={'tel'}
           w={'full'}
         />
       </div>

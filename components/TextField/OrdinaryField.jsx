@@ -16,7 +16,7 @@ const OrdinaryField = ({
           <label htmlFor={fieldName} className='text-sm font-medium tracking-wide whitespace-nowrap '>{label}: </label>
         </div>
         <input 
-          className={`border-[2px] rounded-md focus:outline-[2px] outline-black flex justify-start items-center p-1.5 text-sm font-medium tracking-wide capitalize ${fieldLength == 'long' ? 'w-80' : 'w-56'}`}
+          className={`border-[2px] rounded-md focus:outline-[2px] outline-black flex justify-start items-center p-1.5 text-sm font-medium tracking-wide ${type == 'text' && 'capitalize' } ${fieldLength == 'long' ? 'w-80' : 'w-56'}`}
           name={fieldName}
           placeholder={placeholder}
           onChange={(e)=> value[`${fieldName}`] = e.target.value}

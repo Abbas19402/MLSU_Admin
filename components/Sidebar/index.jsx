@@ -4,7 +4,7 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 import { useRouter } from 'next/router'
 
 const Sidebar = ({ sidebarStatus, setSidebarStatus, setActiveSection }) => {
-  const [ active, setActive ] = useState('students')
+  const [ active, setActive ] = useState('')
   const { push, pathname } = useRouter()
   useEffect(()=> {
     if(pathname == '/') {

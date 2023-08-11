@@ -1,8 +1,9 @@
+import EventPage from '@/pageComponents/Events/EventPage'
 import React from 'react'
 
 const Events = () => {
   return (
-    <div className='text-black'>Events</div>
+    <EventPage />
   )
 }
 
