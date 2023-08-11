@@ -5,7 +5,7 @@ const FacultyDocumentTable = ({ documents }) => {
         console.log(documents);
     }, [documents])
     return (
-        <table className="w-full text-sm text-left text-gray-500">
+        <table className="w-full text-sm text-left text-gray-500 overflow-x-scroll ">
             <thead className="text-xs text-gray-700 uppercase bg-gray-200 ">
                 <tr className='text-center'>
                 <th scope="col" className="px-6 py-3 whitespace-nowrap">

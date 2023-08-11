@@ -46,7 +46,7 @@ const FacultyQualificationForm = ({ qualification }) => {
           type="file" 
           name="document" 
           id="document" 
-          className={`border-[2px] rounded-md focus:outline-[2px] outline-black flex justify-start items-center p-1.5 text-sm font-medium tracking-wide capitalize w-80`} 
+          className={`border-[2px] rounded-md focus:outline-[2px] outline-black flex justify-start items-center p-1.5 text-sm font-medium tracking-wide capitalize w-56 lg:w-80`} 
           onChange={(e)=> qualification['document'] = e.target.files[0]}
         />
       </div>

@@ -5,7 +5,7 @@ import Table from '@/components/Table'
 const QualificationFacultyMain = ({ qualificationDetails }) => {
   const [ qualificationCount, setQualificationCount ] = useState(0)
   const [ qualifications , setQualifications ] = useState([])
-  return (
+  return (<>
     <div className='text-black px-6 py-3 min-w-[80%]'>
       <div className="w-full pt-4">
         <span className="text-lg font-medium tracking-wide text-[#111827]">Qualification Details:</span>
@@ -29,8 +29,12 @@ const QualificationFacultyMain = ({ qualificationDetails }) => {
       }}>
         Save
       </div>
+      
+    </div>
+    <div className="w-screen overflow-x-scroll lg:overflow-x-hidden">
       {qualifications.length !== 0 && <Table.Faculty.Documents documents={qualifications}/>}
     </div>
+    </>
   )
 }
 
