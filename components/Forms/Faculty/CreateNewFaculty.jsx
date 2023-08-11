@@ -5,13 +5,14 @@ import Table from '@/components/Table'
 const CreateNewFaculty = () => {
   const personalDetails = {}
   const qualificationDetails = {}
+  const contactDetails = {}
   return (
-    <div>
+    <div className='pb-10'>
       <Forms.Faculty.personal personalDetails={personalDetails}/>
       <Forms.Faculty.qualification qualificationDetails={qualificationDetails} />
-      {typeof qualificationDetails.data == [] && qualificationDetails.data.length < 0 && <Table.Faculty.Documents documents={qualificationDetails.data}/>}
+      <Forms.Faculty.contact contactDetails={contactDetails}/>
       <div className="w-full my-2 flex justify-end items-center px-6">
-        <div className="w-24 h-7 bg-[#111827] text-white flex justify-center items-center rounded-md hover:cursor-pointer font-medium tracking-wide" onClick={()=> console.log({personalDetails,qualificationDetails})}>
+        <div className="w-24 h-7 bg-[#111827] text-white flex justify-center items-center rounded-md hover:cursor-pointer font-medium tracking-wide" onClick={()=> console.log({personalDetails,qualificationDetails, contactDetails})}>
           Submit
         </div>
       </div>
