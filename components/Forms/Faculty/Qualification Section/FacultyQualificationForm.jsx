@@ -1,4 +1,3 @@
-import TextField from '@/components/TextField';
 import React from 'react'
 import Select from 'react-select'
 
@@ -26,7 +25,7 @@ const FacultyQualificationForm = ({ qualification }) => {
       <div className="flex justify-start items-center gap-x-3">
         <label className='text-sm font-medium tracking-wide text-black w-52'>Select Qualification Type: </label>
         <Select className='w-80 ' options={qType} placeholder="Choose" onChange={(qualificationType)=> {
-            qualification['qType'] = qualificationType.value
+            qualification['qualificationType'] = qualificationType.value
           }}
         />
       </div>
@@ -38,16 +37,6 @@ const FacultyQualificationForm = ({ qualification }) => {
           id="degreeName" 
           className={`border-[2px] rounded-md focus:outline-[2px] outline-black flex justify-start items-center p-1.5 text-sm font-medium tracking-wide capitalize w-80`}
           onChange={(e)=> qualification['degreeName'] = e.target.value}
-        />
-      </div>
-      <div className="flex justify-start items-center gap-x-3 my-4">
-        <label htmlFor="document" className="text-sm font-medium tracking-wide text-black w-52">Upload Document: </label>
-        <input 
-          type="file" 
-          name="document" 
-          id="document" 
-          className={`border-[2px] rounded-md focus:outline-[2px] outline-black flex justify-start items-center p-1.5 text-sm font-medium tracking-wide capitalize w-56 lg:w-80`} 
-          onChange={(e)=> qualification['document'] = e.target.files[0]}
         />
       </div>
     </div>

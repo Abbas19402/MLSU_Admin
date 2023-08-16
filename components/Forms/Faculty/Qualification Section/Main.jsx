@@ -31,9 +31,9 @@ const QualificationFacultyMain = ({ qualificationDetails }) => {
       </div>
       
     </div>
-    <div className="w-screen overflow-x-scroll lg:overflow-x-hidden">
-      {qualifications.length !== 0 && <Table.Faculty.Documents documents={qualifications}/>}
-    </div>
+    {/* <div className="w-screen overflow-x-scroll lg:overflow-x-hidden">
+      {qualificationCount !== 0 && <Table.Faculty.Documents documents={qualifications}/>}
+    </div> */}
     </>
   )
 }

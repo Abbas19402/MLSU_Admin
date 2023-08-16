@@ -1,7 +1,12 @@
 import { Bars3Icon } from '@heroicons/react/24/outline'
 import Icons from '../Icons'
+import { useDispatch, useSelector } from 'react-redux'
+import { LOGOUT } from '@/Redux/AuthSlice'
 
-export default function Header({ sidebarStatus, setSidebarStatus }) {
+export default function Header({ sidebarStatus, setSidebarStatus, open, setOpen }) {
+  const dispatch = useDispatch()
+  const loginStatus = useSelector(state => state.auth.loginStatus)
+  const faculty = useSelector(state => state.auth.faculty)
   return (
     <header className="bg-white lg:bg-[#111827] w-full">
       <nav className="flex max-w-screen items-center gap-x-3 justify-between p-6 lg:px-8" aria-label="Global">
@@ -27,10 +32,15 @@ export default function Header({ sidebarStatus, setSidebarStatus }) {
             placeholder='Search...'
           />
         </div>
-        <div className="flex lg:flex-1 lg:justify-end whitespace-nowrap">
-          <a href="#" className="text-sm font-semibold leading-6 lg:text-white text-black">
+        {loginStatus && <div className="text-sm font-semibold leading-6 lg:text-white text-black mx-5 whitespace-nowrap">
+            <span>{`${faculty.personalDetails.firstName} ${faculty.personalDetails.lastName}`}</span>
+        </div>}
+        <div className="flex lg:flex-1  lg:justify-end items-center whitespace-nowrap">
+          {loginStatus ? <div onClick={()=> dispatch(LOGOUT())} className="text-sm font-semibold leading-6 lg:text-white text-black">
+            Logout
+          </div> : <div onClick={()=> setOpen(true)} className="text-sm font-semibold leading-6 lg:text-white text-black">
             Log in <span aria-hidden="true">&rarr;</span>
-          </a>
+          </div>}
         </div>
       </nav>
     </header>

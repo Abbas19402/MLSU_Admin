@@ -1,8 +1,11 @@
 import "@/styles/globals.css"
 import Layouts from "@/layouts"
+import Providers from "@/Redux/Providers"
 
 export default function App({ Component, pageProps }) {
-  return <Layouts.Dashboard>
-    <Component {...pageProps} />
-  </Layouts.Dashboard>
+  return <Providers>
+    <Layouts.Dashboard>
+      <Component {...pageProps} />
+    </Layouts.Dashboard>
+  </Providers>
 }

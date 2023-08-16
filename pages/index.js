@@ -1,7 +1,8 @@
+import StudentPage from "@/pageComponents/Students/StudentPage";
+
 export default function Home() {
+
   return (
-    <div className="text-black">
-      Hello
-    </div>
+    <StudentPage />
   )
 }

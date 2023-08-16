@@ -5,7 +5,7 @@ const FacultyContactForm = ({ contactDetails }) => {
   return (
     <div className="min-w-[80%] h-full text-black pb-5">
       <div className="w-full px-6 pt-4">
-        <span className="text-lg font-medium tracking-wide text-[#111827]">Personal Details:</span>
+        <span className="text-lg font-medium tracking-wide text-[#111827]">Contact Details:</span>
       </div>
       <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-x-8 px-4 my-4">
         <TextField.Ordinary 
@@ -77,7 +77,7 @@ const FacultyContactForm = ({ contactDetails }) => {
       </div>
       <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-x-8 px-4 my-4">
         <TextField.Ordinary 
-          fieldName={'phone1'}
+          fieldName={'phone'}
           label={'Phone 1'}
           placeholder={'Enter Primary Phone'}
           value={contactDetails}

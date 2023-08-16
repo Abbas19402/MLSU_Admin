@@ -2,7 +2,7 @@ import Icons from "@/components/Icons"
 
 const SidebarRoutes = [
     {
-        route: 'students',
+        route: '/ ',
         label: 'Students',
         icon: <Icons.Student className="h-6 w-6"/>
     },
@@ -20,16 +20,6 @@ const SidebarRoutes = [
         route: 'notifications',
         label: 'Notifications',
         icon: <Icons.Notification className="h-6 w-6"/>
-    },
-    {
-        route: 'attendance',
-        label: 'Attendance',
-        icon: <Icons.Attendance className="h-6 w-6"/>
-    },
-    {
-        route: 'assignments',
-        label: 'Assignments',
-        icon: <Icons.Assignments className="h-6 w-6"/>
     }
 ]
 

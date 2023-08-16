@@ -2,13 +2,15 @@ import React, { useEffect, useState } from 'react'
 import SidebarRoutes from '@/constants/DashboardSidebarRoutes'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { useRouter } from 'next/router'
+import MLSU_LOGO from "../../public/mlsuLogo.png"
+import Image from 'next/image'
 
 const Sidebar = ({ sidebarStatus, setSidebarStatus, setActiveSection }) => {
   const [ active, setActive ] = useState('')
   const { push, pathname } = useRouter()
   useEffect(()=> {
     if(pathname == '/') {
-      setActive('students')
+      setActive('/ ')
       setActiveSection('Students')
     } else {
       setActive(pathname.split('/')[1])
@@ -18,9 +20,9 @@ const Sidebar = ({ sidebarStatus, setSidebarStatus, setActiveSection }) => {
   return (
     <div className={`fixed top-0 left-0 lg:w-[25vw] lg:sticky ${sidebarStatus ? 'w-[80%]' : 'w-0'} overflow-hidden transition-all duration-300 lg:flex flex-col min-h-screen bg-[#111827] rounded-r-2xl lg:rounded-r-none`}>
       <div className="w-full h-fit flex justify-between items-center p-5">
-        <div onClick={()=> push('/')}>
-          <span className="sr-only">Your Company</span>
-          <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" />
+        <div onClick={()=> push('/')} className='relative w-14 h-14'>
+          <span className="sr-only">MohanLal Sukhadia University</span>
+          <Image className="h-8 w-auto" fill src={MLSU_LOGO} />
         </div>
         <button
             type="button"

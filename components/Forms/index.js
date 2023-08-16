@@ -4,8 +4,10 @@ import FacultyContactForm from "./Faculty/FacultyContactForm"
 import PersonalFacultyDetailsSection from "./Faculty/PersonalDetails"
 import QualificationFacultyMain from "./Faculty/Qualification Section/Main"
 import NotificationManagementForm from "./Notification/NotificationManagementForm"
+import CreateStudentForm from "./Student/CreateStudentForm"
 
 const Forms = {
+    Student: CreateStudentForm,
     Faculty: {
         main: CreateNewFaculty,
         personal: PersonalFacultyDetailsSection,
